@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'screens/completion_screen.dart';
 import 'screens/get_started.dart';
+import 'screens/login_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,6 +19,11 @@ class MyApp extends StatelessWidget {
               .copyWith(
                   primary: Colors.deepPurple, secondary: Colors.purpleAccent)),
       home: const GetStarted(),
+      routes: {
+        GetStarted.routename: (context) => const GetStarted(),
+        LoginScreen.routename: (context) => const LoginScreen(),
+        CompletionScreen.routename: (context) => const CompletionScreen(),
+      },
     );
   }
 }
