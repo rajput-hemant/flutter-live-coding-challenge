@@ -25,14 +25,16 @@ class LoginScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Text(
-              'Login',
-              style: TextStyle(
-                  color: Theme.of(context).colorScheme.primary,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20),
+            // Text(
+            //   'Login',
+            //   style: TextStyle(
+            //     color: Theme.of(context).colorScheme.primary,
+            //     fontSize: 24,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
+            Image.asset('assets/images/login.webp'),
+            // const SizedBox(height: 20),
             TextFieldBuilder(
               icon: const Icon(Icons.account_circle_sharp),
               labelText: "Student Name",
