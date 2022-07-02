@@ -47,25 +47,27 @@ class CompletionScreen extends StatelessWidget {
         ],
       ),
     );
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            headerText,
-            const SizedBox(height: 10),
-            Image.asset('assets/images/certificate.jpg'),
-            const SizedBox(height: 60),
-            bodyText,
-            const SizedBox(height: 20),
-            Text(
-              'Date: ${DateFormat.yMMMd().format(DateTime.now())}',
-              textAlign: TextAlign.right,
-              style: const TextStyle(fontWeight: FontWeight.w800),
-            )
-          ],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              headerText,
+              const SizedBox(height: 10),
+              Image.asset('assets/images/certificate.jpg'),
+              const SizedBox(height: 60),
+              bodyText,
+              const SizedBox(height: 20),
+              Text(
+                'Date: ${DateFormat.yMMMd().format(DateTime.now())}',
+                textAlign: TextAlign.right,
+                style: const TextStyle(fontWeight: FontWeight.w800),
+              )
+            ],
+          ),
         ),
       ),
     );
