@@ -1,8 +1,18 @@
 ![View Counter](https://komarev.com/ghpvc/?username=flutter-live-coding-challenge&label=View%20Counter&color=red&style=flat) &nbsp; &nbsp; ![Repo Size](https://img.shields.io/github/repo-size/rajput-hemant/flutter-live-coding-challenge?color=blue)
 
-# Flutter Live Coding Challenge [<kbd> ![](https://img.icons8.com/material/20/undefined/downloads.png) </kbd>]() 
+# Flutter Live Coding Challenge [<kbd> ![](https://img.icons8.com/material/20/undefined/downloads.png) </kbd>](https://github.com/rajput-hemant/flutter-live-coding-challenge/releases/download/v0.1.0/JoVAC-v0.1.0.apk) 
 
-A new Flutter project JoVAC Assessment.
+A new Flutter project for JoVAC Assessment.
+
+# 📱 App UI
+
+ <details>
+    <summary> Click here to expand </summary>
+        <p align="center">
+            <img src="https://github.com/rajput-hemant/flutter-live-coding-challenge/blob/master/assets/github_readme/app_ui.gif?raw=true" width="300" />
+        </p>
+</details>
+
 
 ## Building from Source
 
