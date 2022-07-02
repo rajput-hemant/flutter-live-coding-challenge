@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_live_coding_challenge">
    <application
-        android:label="flutter_live_coding_challenge"
+        android:label="JoVAC"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
