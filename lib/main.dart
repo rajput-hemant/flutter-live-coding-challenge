@@ -10,10 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Live Coding Challeneg',
+      title: 'Flutter Live Coding Challenge',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple)
+              .copyWith(
+                  primary: Colors.deepPurple, secondary: Colors.purpleAccent)),
       home: const GetStarted(),
     );
   }
