@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 import 'completion_screen.dart';
 import '../widgets/text_field_builder.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   static const routename = '/login_screen';
+
+  const LoginScreen({Key? key}) : super(key: key);
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
 
-  LoginScreen({Key? key}) : super(key: key);
+  var text = '';
 
   @override
   Widget build(BuildContext context) {
@@ -37,22 +45,27 @@ class LoginScreen extends StatelessWidget {
             // const SizedBox(height: 20),
             TextFieldBuilder(
               icon: const Icon(Icons.account_circle_sharp),
-              labelText: "Student Name",
+              labelText: "Enter your Name",
               textType: TextInputType.name,
               controller: nameController,
             ),
             const SizedBox(height: 20),
             TextFieldBuilder(
               icon: const Icon(Icons.email),
-              labelText: 'Student Email',
+              labelText: 'Enter your Email',
               textType: TextInputType.emailAddress,
               controller: emailController,
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => Navigator.pushNamed(
-                  context, CompletionScreen.routename,
-                  arguments: nameController.text),
+              onPressed: () {
+                setState(() {
+                  nameController.text.isEmpty || emailController.text.isEmpty
+                      ? text = 'Please fill all fields properly!'
+                      : Navigator.pushNamed(context, CompletionScreen.routename,
+                          arguments: nameController.text);
+                });
+              },
               style: ElevatedButton.styleFrom(
                 elevation: 10,
                 minimumSize: const Size(200, 60),
@@ -62,6 +75,18 @@ class LoginScreen extends StatelessWidget {
               child: const Text(
                 'Login',
                 style: TextStyle(fontSize: 24),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: Text(
+                text.isEmpty ? "" : text,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 22,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             )
           ],
