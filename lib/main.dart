@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       home: const GetStarted(),
       routes: {
         GetStarted.routename: (context) => const GetStarted(),
-        LoginScreen.routename: (context) => const LoginScreen(),
+        LoginScreen.routename: (context) => LoginScreen(),
         CompletionScreen.routename: (context) => const CompletionScreen(),
       },
     );
